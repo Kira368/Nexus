@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Admin | Users</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Decorative elements -->
+    <div class="corner-accent top-right"></div>
+    <div class="corner-accent bottom-left"></div>
+    
+    <!-- Sidebar menu -->
+    <aside class="sidebar">
+        <div class="logo" id="logo">
+            <span class="logo-icon">⚡</span>
+            <h2>Nexus</h2>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item" data-page="dashboard">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item active" data-page="users">
+                <a href="users.html" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Users</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="products">
+                <a href="products.html" class="nav-link">
+                    <span class="nav-icon">📦</span>
+                    <span class="nav-text">Products</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="finance">
+                <a href="finance.html" class="nav-link">
+                    <span class="nav-icon">💵</span>
+                    <span class="nav-text">Finance</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="settings">
+                <a href="settings.html" class="nav-link">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="reports">
+                <a href="reports.html" class="nav-link">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">Reports</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="security">
+                <a href="security.html" class="nav-link">
+                    <span class="nav-icon">🔒</span>
+                    <span class="nav-text">Security</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="tools">
+                <a href="tools.html" class="nav-link">
+                    <span class="nav-icon">🛠️</span>
+                    <span class="nav-text">Tools</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    
+    <!-- Main content area -->
+    <main class="main-content">
+        <!-- Header (common for all pages) -->
+        <header>
+            <div class="header-left">
+                <h1 id="page-title">Users</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile" id="user-profile">
+                    <span class="user-name">Admin</span>
+                    <div class="user-avatar">A</div>
+                    <span>▼</span>
+                    
+                    <!-- User menu -->
+                    <div class="user-menu">
+                        <a href="#" class="user-menu-item">
+                            <span>👤</span> My Profile
+                        </a>
+                        <a href="#" class="user-menu-item">
+                            <span>⚙️</span> Settings
+                        </a>
+                        <a href="#" class="user-menu-item">
+                            <span>💬</span> Messages <span style="margin-left: auto; background: var(--accent-color); color: white; border-radius: 10px; padding: 2px 6px; font-size: 0.7rem;">3</span>
+                        </a>
+                        <div class="user-menu-divider"></div>
+                        <a href="#" class="user-menu-item">
+                            <span>🚪</span> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Users page -->
+        <div class="page active" id="users">
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">User Management</h3>
+                    <div class="section-actions">
+                        <button class="btn btn-primary">Add User</button>
+                    </div>
+                </div>
+                
+                <div class="tabs">
+                    <div class="tab active">All Users</div>
+                    <div class="tab">Administrators</div>
+                    <div class="tab">Moderators</div>
+                    <div class="tab">Banned</div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <div class="search-bar" style="margin-right: 0;">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search users..." style="width: 300px;">
+                    </div>
+                    
+                    <div style="display: flex;">
+                        <div class="select-container" style="margin-right: 10px;">
+                            <select class="form-control">
+                                <option>Sort by: Date</option>
+                                <option>Sort by: Name</option>
+                                <option>Sort by: Activity</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-secondary">Filters</button>
+                    </div>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 40px;">
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </th>
+                            <th>User</th>
+                            <th>Role</th>
+                            <th>Registration Date</th>
+                            <th>Last Active</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div class="avatar" style="background: #6e45e2; color: white; margin-right: 10px;">JS</div>
+                                    <div>
+                                        <div style="font-weight: bold;">John Smith</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">john@example.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="status-badge status-active">Administrator</span></td>
+                            <td>Mar 12, 2023</td>
+                            <td>Just now</td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div class="avatar" style="background: #ff7e5f; color: white; margin-right: 10px;">AJ</div>
+                                    <div>
+                                        <div style="font-weight: bold;">Anna Johnson</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">anna@example.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="status-badge status-pending">Moderator</span></td>
+                            <td>Feb 28, 2023</td>
+                            <td>2 hours ago</td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div class="avatar" style="background: #4caf50; color: white; margin-right: 10px;">MB</div>
+                                    <div>
+                                        <div style="font-weight: bold;">Michael Brown</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">michael@example.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="status-badge status-active">User</span></td>
+                            <td>Jan 15, 2023</td>
+                            <td>Yesterday</td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div class="avatar" style="background: #ff9800; color: white; margin-right: 10px;">ED</div>
+                                    <div>
+                                        <div style="font-weight: bold;">Emily Davis</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">emily@example.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="status-badge status-inactive">Banned</span></td>
+                            <td>Dec 5, 2022</td>
+                            <td>2 weeks ago</td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div class="avatar" style="background: #e91e63; color: white; margin-right: 10px;">RW</div>
+                                    <div>
+                                        <div style="font-weight: bold;">Robert Wilson</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">robert@example.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="status-badge status-active">User</span></td>
+                            <td>Nov 22, 2022</td>
+                            <td>5 days ago</td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                        Showing 1-5 of 128 users
+                    </div>
+                    <div style="display: flex;">
+                        <button class="btn btn-secondary" style="margin-right: 10px;">Previous</button>
+                        <button class="btn btn-secondary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

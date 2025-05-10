@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Admin | Reports</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Decorative elements -->
+    <div class="corner-accent top-right"></div>
+    <div class="corner-accent bottom-left"></div>
+    
+    <!-- Sidebar menu -->
+    <aside class="sidebar">
+        <div class="logo" id="logo">
+            <span class="logo-icon">⚡</span>
+            <h2>Nexus</h2>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item active" data-page="dashboard">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="users">
+                <a href="users.html" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Users</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="products">
+                <a href="products.html" class="nav-link">
+                    <span class="nav-icon">📦</span>
+                    <span class="nav-text">Products</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="finance">
+                <a href="finance.html" class="nav-link">
+                    <span class="nav-icon">💵</span>
+                    <span class="nav-text">Finance</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="settings">
+                <a href="settings.html" class="nav-link">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="reports">
+                <a href="reports.html" class="nav-link">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">Reports</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="security">
+                <a href="security.html" class="nav-link">
+                    <span class="nav-icon">🔒</span>
+                    <span class="nav-text">Security</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="tools">
+                <a href="tools.html" class="nav-link">
+                    <span class="nav-icon">🛠️</span>
+                    <span class="nav-text">Tools</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    
+    <!-- Main content area -->
+    <main class="main-content">
+        <!-- Header (common for all pages) -->
+        <header>
+            <div class="header-left">
+                <h1 id="page-title">Reports</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile" id="user-profile">
+                    <span class="user-name">Admin</span>
+                    <div class="user-avatar">A</div>
+                    <span>▼</span>
+                    
+                    <!-- User menu -->
+                    <div class="user-menu">
+                        <a href="#" class="user-menu-item">
+                            <span>👤</span> My Profile
+                        </a>
+                        <a href="#" class="user-menu-item">
+                            <span>⚙️</span> Settings
+                        </a>
+                        <a href="#" class="user-menu-item">
+                            <span>💬</span> Messages <span style="margin-left: auto; background: var(--accent-color); color: white; border-radius: 10px; padding: 2px 6px; font-size: 0.7rem;">3</span>
+                        </a>
+                        <div class="user-menu-divider"></div>
+                        <a href="#" class="user-menu-item">
+                            <span>🚪</span> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Reports page -->
+        <div class="page active" id="reports">
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Report Generation</h3>
+                    <div class="section-actions">
+                        <button class="btn btn-primary">Create Report</button>
+                    </div>
+                </div>
+                
+                <div class="tabs">
+                    <div class="tab active">Sales</div>
+                    <div class="tab">Users</div>
+                    <div class="tab">Finance</div>
+                    <div class="tab">Inventory</div>
+                </div>
+                
+                <div style="display: flex; margin-bottom: 20px;">
+                    <div style="margin-right: 15px;">
+                        <label class="form-label">Start Date</label>
+                        <input type="date" class="form-control" value="2023-05-01">
+                    </div>
+                    <div style="margin-right: 15px;">
+                        <label class="form-label">End Date</label>
+                        <input type="date" class="form-control" value="2023-05-31">
+                    </div>
+                    <div style="margin-right: 15px;">
+                        <label class="form-label">Format</label>
+                        <div class="select-container">
+                            <select class="form-control">
+                                <option>PDF</option>
+                                <option>Excel</option>
+                                <option>CSV</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="align-self: flex-end;">
+                        <button class="btn btn-secondary">Apply</button>
+                    </div>
+                </div>
+                
+                <div class="chart-container" style="height: 400px; margin-bottom: 20px;">
+                    <div style="width: 100%; height: 100%; background: rgba(110, 69, 226, 0.05); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                        Report Data Chart (Chart.js integration)
+                    </div>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Orders Count</th>
+                            <th>Total Amount</th>
+                            <th>Taxes</th>
+                            <th>Revenue</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>May 2023</td>
+                            <td>356</td>
+                            <td>$24,589.00</td>
+                            <td>$3,289.00</td>
+                            <td>$21,300.00</td>
+                            <td>
+                                <button class="section-action">📥</button>
+                                <button class="section-action">👁️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>April 2023</td>
+                            <td>298</td>
+                            <td>$19,432.00</td>
+                            <td>$2,789.00</td>
+                            <td>$16,643.00</td>
+                            <td>
+                                <button class="section-action">📥</button>
+                                <button class="section-action">👁️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>March 2023</td>
+                            <td>312</td>
+                            <td>$21,045.00</td>
+                            <td>$2,945.00</td>
+                            <td>$18,100.00</td>
+                            <td>
+                                <button class="section-action">📥</button>
+                                <button class="section-action">👁️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>February 2023</td>
+                            <td>276</td>
+                            <td>$18,765.00</td>
+                            <td>$2,567.00</td>
+                            <td>$16,198.00</td>
+                            <td>
+                                <button class="section-action">📥</button>
+                                <button class="section-action">👁️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>January 2023</td>
+                            <td>245</td>
+                            <td>$16,432.00</td>
+                            <td>$2,245.00</td>
+                            <td>$14,187.00</td>
+                            <td>
+                                <button class="section-action">📥</button>
+                                <button class="section-action">👁️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Saved Reports</h3>
+                    <div class="section-actions">
+                        <button class="btn btn-secondary">Clear History</button>
+                    </div>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Created</th>
+                            <th>Size</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sales Report May 2023</td>
+                            <td>PDF</td>
+                            <td>Jun 1, 2023</td>
+                            <td>2.4 MB</td>
+                            <td>
+                                <button class="section-action">📥</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Financial Report Q1 2023</td>
+                            <td>Excel</td>
+                            <td>Apr 1, 2023</td>
+                            <td>1.8 MB</td>
+                            <td>
+                                <button class="section-action">📥</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>User Analysis 2022</td>
+                            <td>PDF</td>
+                            <td>Jan 15, 2023</td>
+                            <td>3.2 MB</td>
+                            <td>
+                                <button class="section-action">📥</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Inventory Dec 1, 2022</td>
+                            <td>CSV</td>
+                            <td>Dec 2, 2022</td>
+                            <td>4.1 MB</td>
+                            <td>
+                                <button class="section-action">📥</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

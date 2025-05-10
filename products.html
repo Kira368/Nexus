@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Admin | Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Decorative elements -->
+    <div class="corner-accent top-right"></div>
+    <div class="corner-accent bottom-left"></div>
+    
+    <!-- Sidebar menu -->
+    <aside class="sidebar">
+        <div class="logo" id="logo">
+            <span class="logo-icon">⚡</span>
+            <h2>Nexus</h2>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item" data-page="dashboard">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="users">
+                <a href="users.html" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Users</span>
+                </a>
+            </li>
+            <li class="nav-item active" data-page="products">
+                <a href="products.html" class="nav-link">
+                    <span class="nav-icon">📦</span>
+                    <span class="nav-text">Products</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="finance">
+                <a href="finance.html" class="nav-link">
+                    <span class="nav-icon">💵</span>
+                    <span class="nav-text">Finance</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="settings">
+                <a href="settings.html" class="nav-link">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="reports">
+                <a href="reports.html" class="nav-link">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">Reports</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="security">
+                <a href="security.html" class="nav-link">
+                    <span class="nav-icon">🔒</span>
+                    <span class="nav-text">Security</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="tools">
+                <a href="tools.html" class="nav-link">
+                    <span class="nav-icon">🛠️</span>
+                    <span class="nav-text">Tools</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    
+    <!-- Main content area -->
+    <main class="main-content">
+        <header>
+            <div class="header-left">
+                <h1 id="page-title">Products</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile" id="user-profile">
+                    <span class="user-name">Admin</span>
+                    <div class="user-avatar">A</div>
+                    <span>▼</span>
+                    <div class="user-menu">
+                        <a href="#" class="user-menu-item">
+                            <span>👤</span> My Profile
+                        </a>
+                        <a href="#" class="user-menu-item">
+                            <span>⚙️</span> Settings
+                        </a>
+                        <a href="#" class="user-menu-item">
+                            <span>💬</span> Messages <span style="margin-left: auto; background: var(--accent-color); color: white; border-radius: 10px; padding: 2px 6px; font-size: 0.7rem;">3</span>
+                        </a>
+                        <div class="user-menu-divider"></div>
+                        <a href="#" class="user-menu-item">
+                            <span>🚪</span> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="page active" id="products">
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Product Management</h3>
+                    <div class="section-actions">
+                        <button class="btn btn-primary">Add Product</button>
+                    </div>
+                </div>
+                
+                <div class="tabs">
+                    <div class="tab active">All Products</div>
+                    <div class="tab">Active</div>
+                    <div class="tab">Archive</div>
+                    <div class="tab">Out of Stock</div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <div class="search-bar" style="margin-right: 0;">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search products..." style="width: 300px;">
+                    </div>
+                    
+                    <div style="display: flex;">
+                        <div class="select-container" style="margin-right: 10px;">
+                            <select class="form-control">
+                                <option>Category: All</option>
+                                <option>Electronics</option>
+                                <option>Clothing</option>
+                                <option>Food</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-secondary">Export</button>
+                    </div>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div style="width: 40px; height: 40px; background: #f0f0f0; border-radius: 4px; margin-right: 10px;"></div>
+                                    <div>
+                                        <div style="font-weight: bold;">X10 Pro Smartphone</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">Electronics</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Smartphones</td>
+                            <td>$599.99</td>
+                            <td>24</td>
+                            <td><span class="status-badge status-active">Available</span></td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1002</td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div style="width: 40px; height: 40px; background: #f0f0f0; border-radius: 4px; margin-right: 10px;"></div>
+                                    <div>
+                                        <div style="font-weight: bold;">Wireless Headphones</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">Accessories</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Accessories</td>
+                            <td>$129.99</td>
+                            <td>56</td>
+                            <td><span class="status-badge status-active">Available</span></td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1003</td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div style="width: 40px; height: 40px; background: #f0f0f0; border-radius: 4px; margin-right: 10px;"></div>
+                                    <div>
+                                        <div style="font-weight: bold;">Classic T-Shirt</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">Clothing</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Clothing</td>
+                            <td>$24.99</td>
+                            <td>0</td>
+                            <td><span class="status-badge status-inactive">Out of Stock</span></td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1004</td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div style="width: 40px; height: 40px; background: #f0f0f0; border-radius: 4px; margin-right: 10px;"></div>
+                                    <div>
+                                        <div style="font-weight: bold;">UltraBook Laptop</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">Computers</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Laptops</td>
+                            <td>$1,299.99</td>
+                            <td>8</td>
+                            <td><span class="status-badge status-active">Available</span></td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1005</td>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <div style="width: 40px; height: 40px; background: #f0f0f0; border-radius: 4px; margin-right: 10px;"></div>
+                                    <div>
+                                        <div style="font-weight: bold;">Automatic Coffee Maker</div>
+                                        <div style="font-size: 0.8rem; color: var(--text-secondary);">Appliances</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Appliances</td>
+                            <td>$199.99</td>
+                            <td>15</td>
+                            <td><span class="status-badge status-pending">Pre-order</span></td>
+                            <td>
+                                <button class="section-action">✏️</button>
+                                <button class="section-action">👁️</button>
+                                <button class="section-action">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                        Showing 1-5 of 42 products
+                    </div>
+                    <div style="display: flex;">
+                        <button class="btn btn-secondary" style="margin-right: 10px;">Previous</button>
+                        <button class="btn btn-secondary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

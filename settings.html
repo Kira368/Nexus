@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Admin | Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Decorative elements -->
+    <div class="corner-accent top-right"></div>
+    <div class="corner-accent bottom-left"></div>
+    
+    <!-- Sidebar menu -->
+    <aside class="sidebar">
+        <div class="logo" id="logo">
+            <span class="logo-icon">⚡</span>
+            <h2>Nexus</h2>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item" data-page="dashboard">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="users">
+                <a href="users.html" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Users</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="products">
+                <a href="products.html" class="nav-link">
+                    <span class="nav-icon">📦</span>
+                    <span class="nav-text">Products</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="finance">
+                <a href="finance.html" class="nav-link">
+                    <span class="nav-icon">💵</span>
+                    <span class="nav-text">Finance</span>
+                </a>
+            </li>
+            <li class="nav-item active" data-page="settings">
+                <a href="settings.html" class="nav-link">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="reports">
+                <a href="reports.html" class="nav-link">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">Reports</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="security">
+                <a href="security.html" class="nav-link">
+                    <span class="nav-icon">🔒</span>
+                    <span class="nav-text">Security</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="tools">
+                <a href="tools.html" class="nav-link">
+                    <span class="nav-icon">🛠️</span>
+                    <span class="nav-text">Tools</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    
+    <!-- Main content area -->
+    <main class="main-content">
+        <header>
+            <div class="header-left">
+                <h1 id="page-title">Settings</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile" id="user-profile">
+                    <span class="user-name">Admin</span>
+                    <div class="user-avatar">A</div>
+                    <span>▼</span>
+                    <div class="user-menu">
+                        <a href="#" class="user-menu-item">
+                            <span>👤</span> My Profile
+                        </a>
+                        <a href="#" class="user-menu-item">
+                            <span>⚙️</span> Settings
+                        </a>
+                        <a href="#" class="user-menu-item">
+                            <span>💬</span> Messages <span style="margin-left: auto; background: var(--accent-color); color: white; border-radius: 10px; padding: 2px 6px; font-size: 0.7rem;">3</span>
+                        </a>
+                        <div class="user-menu-divider"></div>
+                        <a href="#" class="user-menu-item">
+                            <span>🚪</span> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="page active" id="settings">
+            <div class="content-section">
+                <div class="section-card" style="grid-column: 1 / -1;">
+                    <div class="section-header">
+                        <h3 class="section-title">General Settings</h3>
+                    </div>
+                    
+                    <form>
+                        <div class="content-section" style="grid-template-columns: 1fr 1fr; margin-bottom: 0;">
+                            <div>
+                                <div class="form-group">
+                                    <label class="form-label">Site Name</label>
+                                    <input type="text" class="form-control" value="Nexus Admin">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Site URL</label>
+                                    <input type="text" class="form-control" value="https://nexus-admin.example.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Default Language</label>
+                                    <div class="select-container">
+                                        <select class="form-control">
+                                            <option>English</option>
+                                            <option>Russian</option>
+                                            <option>German</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Timezone</label>
+                                    <div class="select-container">
+                                        <select class="form-control">
+                                            <option>(UTC+00:00) London</option>
+                                            <option>(UTC+01:00) Berlin</option>
+                                            <option>(UTC+03:00) Moscow</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="form-group">
+                                    <label class="form-label">Logo</label>
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 60px; height: 60px; background: rgba(110, 69, 226, 0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                            <span style="font-size: 1.5rem;">⚡</span>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-secondary" style="margin-right: 10px;">Upload</button>
+                                            <button class="btn btn-secondary">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Favicon</label>
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 40px; height: 40px; background: rgba(255, 126, 95, 0.2); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                            <span style="font-size: 1rem;">N</span>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-secondary" style="margin-right: 10px;">Upload</button>
+                                            <button class="btn btn-secondary">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        <span style="margin-left: 10px;">Maintenance Mode</span>
+                                    </label>
+                                    <div style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 5px;">
+                                        When enabled, site will be unavailable for users
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+                            <button class="btn btn-secondary" style="margin-right: 10px;">Reset</button>
+                            <button class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Email Settings</h3>
+                </div>
+                
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">SMTP Server</label>
+                        <input type="text" class="form-control" value="smtp.example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Port</label>
+                        <input type="text" class="form-control" value="587">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" value="noreply@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" value="********">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Encryption</label>
+                        <div class="select-container">
+                            <select class="form-control">
+                                <option>TLS</option>
+                                <option>SSL</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+                        <button class="btn btn-secondary" style="margin-right: 10px;">Test</button>
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Advanced Settings</h3>
+                </div>
+                
+                <form>
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span style="margin-left: 10px;">Enable Caching</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span style="margin-left: 10px;">Enable Debug Mode</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span style="margin-left: 10px;">Collect Statistics</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span style="margin-left: 10px;">Email Notifications</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Items Per Page Limit</label>
+                        <input type="number" class="form-control" value="25">
+                    </div>
+                    
+                    <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
